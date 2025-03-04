@@ -1,0 +1,70 @@
+{
+  "name": "plainit-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "env-cmd -f .env.dev codeceptjs run --verbose --features --grep=@editorfullview\"",
+    "test:e2e:playwright": "env-cmd -f .env.dev.local codeceptjs run --verbose --features --grep=@contactus",
+    "test:e2e:webdriver": "env-cmd -f .env.dev.local codeceptjs run --config ./codecept.webdriver.conf.js --verbose --features",
+    "generate:steps": "codeceptjs gherkin:snippets",
+    "post:generate:steps": "echo 'make sure background statements are not there in feature files'",
+    "test:e2e": "env-cmd -f .env.dev codeceptjs run --verbose --features --reporter mocha-multi",
+    "test:e2e:ci": "env-cmd -f .env.dev codeceptjs run --verbose --features",
+    "test:e2e:ci:mocha": "env-cmd -f .env.dev codeceptjs run --verbose --features",
+    "report:allure": "npx allure generate ./output -o ./allure-results --clean",
+    "postinstall": "npx playwright install",
+    "init": "npx codeceptjs -c gherkin:init"
+  },
+  "dependencies": {
+    "@codeceptjs/configure": "^0.5.0",
+    "@codeceptjs/ui": "^0.2.0",
+    "@codeceptjs/allure-legacy": "^1.0.2",
+    "playwright": "1.41.2",
+    "webdriverio": "^9.10.1",
+    "codeceptjs": "^3.6.10",
+    "allure-commandline": "^2.24.1",
+    "chai": "^4.3.10",
+    "cheerio": "^1.0.0-rc.12",
+    "debug": "^4.3.4",
+    "deepmerge": "^4.3.1",
+    "dot-object": "^2.1.4",
+    "dotenv-flow": "^4.0.1",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-codeceptjs": "^1.3.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "lodash": "^4.17.21",
+    "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.1",
+    "mocha-multi": "^1.1.7",
+    "moment": "^2.29.4",
+    "nps": "^5.10.0",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "sanitize-html": "^2.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sehsul/PlanIT"
+  },
+  "keywords": [
+    "PlanIT",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.3",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.3",
+    "@types/cheerio": "^0.22.34",
+    "@types/sanitize-html": "^2.9.4",
+    "faker": "^6.6.6"
+  }
+}

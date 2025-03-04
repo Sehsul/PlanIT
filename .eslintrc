@@ -1,0 +1,33 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb", "prettier", "plugin:react-hooks/recommended", "plugin:jest/recommended", "plugin:codeceptjs/recommended"],
+    "plugins": ["prettier", "jest"],
+    "rules": {
+      "prettier/prettier": ["warn"],
+      "linebreak-style": ["warn", "unix"],
+      "react/prefer-stateless-function": "off",
+      "react/jsx-filename-extension": "off",
+      "no-use-before-define": "off",
+      "react/jsx-closing-bracket-location": "off",
+      "react/jsx-curly-spacing": "off",
+      "react/jsx-equals-spacing": "off",
+      "react/jsx-first-prop-new-line": "off",
+      "react/jsx-indent": "off",
+      "react/jsx-indent-props": "off",
+      "react/jsx-max-props-per-line": "off",
+      "react/jsx-tag-spacing": "off",
+      "react/jsx-wrap-multilines": "off",
+      "react/jsx-props-no-spreading": "off",
+      "import/no-cycle":["warn"],
+      "import/no-extraneous-dependencies":"off",
+      "import/prefer-default-export": "off",
+      "jest/no-disabled-tests": "warn",
+      "jest/no-focused-tests": "warn",
+      "jest/no-identical-title": "warn",
+      "jest/prefer-to-have-length": "warn",
+      "jest/valid-expect": "warn",
+
+      "jest/no-large-snapshots":["warn", { "maxSize": 70, "inlineMaxSize": 12 }]
+    }
+  }
+  

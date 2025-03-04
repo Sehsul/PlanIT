@@ -1,0 +1,50 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+junit.xml
+/Header/__tests__/__snapshots__
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.training.local
+.env.staging.local
+.env.prod.local
+.env.dev.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+
+# no use folders
+/no-use
+/.vscode
+.vscode
+
+# E2e repos
+/e2e/output/**/*.xml 
+/e2e/output/**/*.png
+/e2e/output/**/*.jpg
+/e2e/output/**/*.jpg
+/allure-report/**
+
+# junit files
+/junit/**/*.xml
+
+## output
+/output
+
+.vscode
+.vs/*
+.vs
