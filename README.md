@@ -7,7 +7,7 @@ This project is an end-to-end (E2E) test automation suite for the Planit applica
 ### Clone Repository
 ```sh
 git clone https://github.com/Sehsul/PlanIT
-cd planit-e2e-tests
+cd planit
 ```
 
 ### Install Dependencies
@@ -29,7 +29,7 @@ npx playwright install
 ## Test Execution
 ### Run All Tests
 ```sh
-npx codeceptjs run --plugins autoDelay
+npm run test:e2e
 npm run test:e2e:playwright  # Playwright
 npm run test:e2e:webdriver  # Webdriver
 ```
@@ -38,6 +38,7 @@ npm run test:e2e:webdriver  # Webdriver
 ```sh
 HEADLESS=true npx codeceptjs run
 ```
+Also can change `.env.dev.local` and set all env variables there.
 
 ### Run Specific Feature File
 ```sh

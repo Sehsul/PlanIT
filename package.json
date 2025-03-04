@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "env-cmd -f .env.dev codeceptjs run --verbose --features --grep=@editorfullview\"",
+    "test:e2e": "env-cmd -f .env.dev.local codeceptjs run --verbose --features",
     "test:e2e:playwright": "env-cmd -f .env.dev.local codeceptjs run --verbose --features --grep=@contactus",
     "test:e2e:webdriver": "env-cmd -f .env.dev.local codeceptjs run --config ./codecept.webdriver.conf.js --verbose --features",
     "generate:steps": "codeceptjs gherkin:snippets",
     "post:generate:steps": "echo 'make sure background statements are not there in feature files'",
-    "test:e2e": "env-cmd -f .env.dev codeceptjs run --verbose --features --reporter mocha-multi",
     "test:e2e:ci": "env-cmd -f .env.dev codeceptjs run --verbose --features",
     "test:e2e:ci:mocha": "env-cmd -f .env.dev codeceptjs run --verbose --features",
     "report:allure": "npx allure generate ./output -o ./allure-results --clean",
